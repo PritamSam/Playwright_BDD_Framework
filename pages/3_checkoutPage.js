@@ -1,4 +1,4 @@
-class chekoutPage {
+export class chekoutPage {
     constructor(page) {
         this.page = page;
         this.addToCartButton = page.locator('//div[@class="pricebar"]/button');
@@ -48,5 +48,3 @@ class chekoutPage {
     }
 
 }
-
-module.exports = { chekoutPage };

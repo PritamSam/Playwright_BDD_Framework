@@ -1,4 +1,4 @@
-class sideMenuPage {
+export class sideMenuPage {
     constructor(page) {
         this.page = page;
         this.sideMenu = page.getByText("Open Menu");
@@ -31,5 +31,3 @@ class sideMenuPage {
     }
 
 }
-
-module.exports = { sideMenuPage };

@@ -1,9 +1,9 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { chromium } from 'playwright';
-import InvalidLogin from '../pages/4_invalidLogin.js';
-import testdata from '../testData/test.json';
-import Messages from '../testData/Messages.json';
+import { invalidLogin} from '../pages/4_invalidLogin.js';
+import testdata from '../testData/test.json' with { type: 'json' };
+import Messages from '../testData/Messages.json' with { type: 'json' };
 
 let loginPage;
 let browser;
@@ -12,7 +12,7 @@ let page;
 Given(`I am on the login page`, async() => {
     browser = await chromium.launch({ headless: false });
     page = await browser.newPage();
-    loginPage = new InvalidLogin(page);
+    loginPage = new invalidLogin(page);
     await page.goto('/');
 });
 

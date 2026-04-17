@@ -1,7 +1,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { chekoutPage } from '../pages/3_checkoutPage.js';
-import Messages from '../testData/Messages.json';
+import Messages from '../testData/Messages.json' with { type: 'json' };
 
 const page = global.page;
 let checkout;

@@ -2,12 +2,12 @@ import { BeforeAll, AfterAll } from '@cucumber/cucumber';
 import { chromium } from 'playwright';
 import { loginHelper } from '../utils/loginHelper.js';
 import { logoutHelper } from '../utils/logoutHelper.js';
-import testdata from '../testData/test.json';
+import testdata from '../testData/test.json' with { type: 'json' };
 
 let browser;
 let page;
 
-BeforeAll({ tags: 'not @invalidLogin' }, async function () {
+BeforeAll({ tags: 'not @invalidLogin', timeout: 30000 }, async function () {
   browser = await chromium.launch({ headless: false });
   page = await browser.newPage();
   const username = testdata.Valid_Username; 

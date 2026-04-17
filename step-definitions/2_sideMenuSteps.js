@@ -1,8 +1,8 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import sideMenuHelper from '../testData/sideMenu.json';
+import sideMenuHelper from '../testData/sideMenu.json' with { type: 'json' };
 import { sideMenuPage } from '../pages/2_sideMenuPage.js';
-import filterMenu from '../testData/filterMenu.json';
+import filterMenu from '../testData/filterMenu.json' with { type: 'json' };
 
 const page = global.page;
 let sideMenu;

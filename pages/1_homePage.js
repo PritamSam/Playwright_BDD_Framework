@@ -1,4 +1,4 @@
-class homepage {
+export class homePage {
     constructor(page) {
         this.page = page;
         this.usernameInput = page.locator('#user-name');
@@ -14,13 +14,15 @@ class homepage {
         await this.loginButton.click();
     }
 
+    async navigateToHomePage() {
+        await this.page.goto('https://www.saucedemo.com/inventory.html');
+    }
+
     async getHeaderTitle() {
         return await this.headerTitle.textContent();
     }
 
     async getProductText() {
-        await this.productText.textContent();
+        return await this.productText.textContent();
     }
 }
-
-module.exports = { homepage };

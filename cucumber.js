@@ -1,6 +1,7 @@
-module.exports = {
+export default {
   default: {
-    require: ['step-definitions/**/*.js', 'support/**/*.js'],
+    paths: ['features/**/*.feature'],
+    import: ['step-definitions/**/*.js', 'support/**/*.js'],
     format: ['progress', 'allure-cucumberjs/reporter'],
     formatOptions: {
       allure: {

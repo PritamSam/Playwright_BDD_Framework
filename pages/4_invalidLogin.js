@@ -1,4 +1,4 @@
-class invalidLogin {
+export class invalidLogin {
     constructor(page) {
         this.page = page;
         this.usernameInput = page.locator('#user-name');
@@ -23,5 +23,3 @@ class invalidLogin {
         return await this.errormessage.textContent();
     }     
 }
-
-module.exports = { invalidLogin };
