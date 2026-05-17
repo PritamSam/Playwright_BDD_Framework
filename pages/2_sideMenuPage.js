@@ -2,7 +2,7 @@ export class sideMenuPage {
     constructor(page) {
         this.page = page;
         this.sideMenu = page.getByText("Open Menu");
-        this.logoutButton = page.getByRole('button', { name: 'Logout' });
+        this.logoutButton = page.getByRole('link', { name: 'Logout' });
         this.filterButton = page.locator('select[class="product_sort_container"]');
         this.sideMenuContents = page.locator('//div[@class="bm-menu"]/nav/a');
     }

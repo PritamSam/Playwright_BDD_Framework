@@ -3,8 +3,10 @@ import path from 'path';
 
 // Folders to clean
 const foldersToClean = [
-  path.resolve('reports/html-report'), // HTML reports
-  path.resolve('test-results') // Playwright test results folder
+  path.resolve('reports/allure-report'), // HTML reports
+  path.resolve('reports/allure-results'), // Playwright test results folder
+  path.resolve('reports/screenshots'), // Screenshots folder
+  path.resolve('reports/videos') // Videos folder
 ];
 
 // Function to delete folder contents
@@ -25,4 +27,4 @@ function deleteFolderContents(folder) {
 foldersToClean.forEach(folder => {
   deleteFolderContents(folder);
   console.log(`Cleaned folder: ${folder}`);
-});
+}); 
